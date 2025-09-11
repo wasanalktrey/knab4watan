@@ -14,7 +14,32 @@
       background: #006699;
       color: #fff;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+    .flag {
+      width: 50px;
+      height: 35px;
+      animation: wave 2s infinite ease-in-out;
+      transform-origin: left center;
+    }
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
     }
     nav {
       background: #004466;
@@ -58,8 +83,16 @@
 <body>
 
 <header>
-  <h1>📘 كناب من أجل الوطن</h1>
-  <p>تفاعل إيجابي وشعور بالمسؤولية</p>
+  <div class="header-left">
+    <!-- 🖼️ Add your logo -->
+    <img src="logo.png" alt="شعار المدرسة" class="logo">
+    <!-- 🚩 Animated flag -->
+    <img src="flag.png" alt="علم الوطن" class="flag">
+  </div>
+  <div class="header-text">
+    <h1>📘 كناب من أجل الوطن</h1>
+    <p>تفاعل إيجابي وشعور بالمسؤولية</p>
+  </div>
 </header>
 
 <nav>
@@ -110,5 +143,3 @@
 
 </body>
 </html>
-
-
